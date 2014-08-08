@@ -1,0 +1,237 @@
+image = new SimpleImage("redwood.jpg");
+back = new SimpleImage("pebbles.jpg");
+back.setSameSize(image);
+
+for (pixel: image) {
+  avg = (pixel.getRed() + pixel.getGreen() + pixel.getBlue())/3;
+  // your code here
+  if (pixel.getGreen>avg*1.5) {
+  pixel2 = back.getPixel(pixel.getX(),pixel.getY());
+  pixel.setRed(pixel2.getRed());
+  pixel.setBlue(pixel2.getBlue());
+  pixel.setGreen(pixel2.getGreen());
+  }
+}
+
+print(image);
+
+
+
+
+image = new SimpleImage("redwood.jpg");
+back = new SimpleImage("pebbles.jpg");
+back.setSameSize(image);
+
+for (pixel: image) {
+  avg = (pixel.getRed() + pixel.getGreen() + pixel.getBlue())/3;
+  // your code here
+  if (pixel.getRed()>avg*1.1) {
+  pixel2 = back.getPixel(pixel.getX(),pixel.getY());
+  pixel.setRed(pixel2.getRed());
+  pixel.setGreen(pixel2.getGreen());
+  pixel.setBlue(pixel2.getBlue());
+ 
+  }
+}
+
+
+
+table = new SimpleTable("baby-2010.csv");
+for (row: table) {
+  // your code here
+  if (row.getField("name").startsWith("X")){
+  print (row); }
+}
+
+
+table = new SimpleTable("baby-2010.csv");
+for (row: table) {
+  // your code here
+  if (row.getField("name").endsWith("x")) {
+  print (row);
+  }
+}
+print(image);
+
+
+
+image = new SimpleImage("striped-fish-blue.jpg");
+back = new SimpleImage("paris.jpg");
+back.setSameSize(image);
+
+for (pixel: image) {
+  avg = (pixel.getRed() + pixel.getGreen() + pixel.getBlue())/3;
+  // your code here
+  if (pixel.getBlue()>avg*0.71) {
+  pixel2 = back.getPixel(pixel.getX(),pixel.getY());
+  pixel.setRed(pixel2.getRed());
+  pixel.setGreen(pixel2.getGreen());
+  pixel.setBlue(pixel2.getBlue());
+ 
+  }
+}
+
+print(image);
+
+
+
+
+
+row access in Table through javascript
+
+table = new SimpleTable("baby-2010.csv");
+for (row: table) {
+  // your code here
+  if (row.getField("name")== "Atticus"){
+  print (row); }
+}
+
+
+
+
+
+table = new SimpleTable("baby-2010.csv");
+for (row: table) {
+  // your code here
+  if (row.getField("rank")> 950){
+  print (row); }
+} 
+
+
+table = new SimpleTable("baby-2010.csv");
+for (row: table) {
+  // your code here
+  if (row.getField("name").startsWith("X") || row.getField("name").startsWith("Y")){
+  print (row);
+  }
+}
+
+
+
+table = new SimpleTable("baby-2010.csv");
+for (row: table) {
+  // your code here
+  if (row.getField("name").startsWith("B") && row.getField("name").endsWith("a")){
+  print (row);
+  }
+}
+
+
+
+table = new SimpleTable("baby-2010.csv");
+for (row: table) {
+  // your code here
+  if (row.getField("name").endsWith("i") && row.getField("gender") == "boy") {
+  print (row);
+  }
+}
+
+
+table = new SimpleTable("baby-2010.csv");
+count = 0;
+for (row: table) {
+  // your code here
+  if (row.getField("name").startsWith("O")) {
+  count = count + 1;
+  print (row);
+  }
+}
+print ("count:", count);
+
+
+table = new SimpleTable("baby-2010.csv");
+count = 0;
+for (row: table) {
+  // your code here
+  if (row.getField("name").startsWith("T") && row.getField("gender")== "girl") {
+  print (row);
+  count = count + 1;
+  }
+}
+print ("count:", count);
+
+
+
+table = new SimpleTable("baby-2010.csv");
+count = 0;
+for (row: table) {
+  // your code here
+  if (row.getField("name").endsWith("d") && row.getField("gender")== "boy") {
+  print (row);
+  count = count + 1;}
+}
+print ("count:", count);
+
+
+
+table = new SimpleTable("baby-2010.csv");
+count1 = 0;
+count2 = 0;
+for (row: table) {
+  // your code here
+  if (row.getField("name").startsWith("A")) {
+    count1 = count1 + 1;
+    print (row);
+  }
+
+  if (row.getField("name").startsWith("B")) {
+    count2 = count2 + 1;
+    print (row);
+  }
+
+}
+
+
+
+*****table = new SimpleTable("baby-2010.csv");
+count1 = 0;
+count2 = 0;
+for (row: table) {
+  // your code here
+  if (row.getField("name").startsWith("A")) {
+  count1 = count1 + 1;
+  }
+  if (row.getField("name").startsWith("B")) {
+  count2 = count2 + 1;
+  }
+  }
+  print ("A count:", count1);
+  print ("B count:", count2);*******
+
+
+table = new SimpleTable("survey-2012.csv");
+table.convertToLowerCase();
+count1 = 0;
+count2 = 0;
+for (row: table) {
+  // your code here
+  if (row.getField("color")=="red") {
+  count1 = count1 + 1;
+  }
+  
+  if (row.getField("color")=="blue") {
+  count2 = count2 + 1;
+  }
+}
+print (count1+count2);
+print ("red", count1);
+print ("blue", count2);
+
+
+table = new SimpleTable("survey-2012.csv");
+table.convertToLowerCase();
+count1 = 0;
+count2 = 0;
+for (row: table) {
+  // your code here
+  if (row.getField("soda")=="coke") {
+  if (row.getField("color")=="red") {
+  count1 = count1+1;
+  }
+  if (row.getField("color")=="red") {
+  count2 = count2+1;
+  }
+  }
+}
+print ("red count:", count1);
+print ("blue count:", count2);
